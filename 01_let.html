@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    div.item{
+        width: 100px;
+        height: 40px;
+        display: inline-block;
+        margin: 30px;
+        border: 1px solid #333;
+        border-radius: 10px;
+        background-color: #fff;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+
+    <script>
+
+        let items = document.getElementsByClassName('item')
+
+        for (let i = 0; i < items.length; i++) {
+            items[i].onclick = function(){
+                // this.style.background = '#333'
+                items[i].style.background = '#333'
+            };
+            
+        }
+
+        // let a
+        // let b, c, d
+        // let e = 100
+        // let f = 520, g = 'gubao', h = []
+
+        //声明变量不能重复
+        // let star = '灰灰';
+        // let star = '药药';
+
+        //块级作用域
+        //if while for 
+
+        // {
+        //     let girl = '咕宝'
+        //     console.log(girl)
+        // }
+
+        //不存在变量提升
+
+        // console.log(action)
+        // let action = 'bobo';
+
+
+
+        //不影响作用域链
+        // {
+        //     let name = 'Gubao'
+        //     function fn() {
+        //         console.log(name)
+        //     }
+        //     fn()
+        // }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
