@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <a href=""></a>
+    <a href=""></a>
+    <a href=""></a>
+
+    <script>
+
+        const baby = ['Huihui', 'Yaoyao', 'Gagaga', 'Wawawawa']
+
+        function change() {
+            console.log(arguments)
+        }
+
+        change(...baby)
+
+        // ===
+
+        change('Huihui', 'Yaoyao', 'Gagaga', 'Wawawawa')
+
+
+
+        // 应用
+        // 1. 数组合并
+
+        const arr = ['Gubao']
+
+        // const family = arr.concat(baby)
+
+        // ===
+
+        const family = [...arr, ...baby]
+
+        console.log('family', family)
+
+
+
+        // 2. 数组克隆
+
+        const bobo = [...family]
+        console.log('bobo', bobo)
+
+
+
+        // 3. 把伪数组转为真数组
+
+        const as = document.querySelectorAll('a')
+        console.log(as)
+
+        const as_arr = [...as]
+        console.log(as_arr)
+
+
+
+    </script>
+</body>
+
+</html>
