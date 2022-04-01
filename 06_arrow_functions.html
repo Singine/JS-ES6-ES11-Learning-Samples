@@ -1,0 +1,179 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: 30px;
+            border: 1px solid #333;
+            border-radius: 10px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="ad"></div>
+
+    <script>
+
+        //ES6 允许使用 箭头来定义函数 => 
+
+        // 声明一个函数
+
+        // let fn = function(){
+
+        // }
+
+        // let fn = (a, b) => {
+        //     console.log(a, b)
+        //     return a + b
+        // }
+
+
+
+        // console.log(fn(1, 2))
+
+
+
+        // // 区别
+        // // 1. this 是静态的 始终指向函数声明时所在的作用域下面的this的值
+        // function getName1() {
+        //     console.log(this.name)
+        // }
+
+        // let getName2 = () => {
+        //     console.log(this.name)
+        // }
+
+        // window.name = 'Gubao'
+        // const Baby = {
+        //     name: 'Huihui'
+        // }
+
+        // //直接调用
+        // getName1()
+        // getName2()
+
+        // //call 方法调用
+        // getName1.call(Baby)
+        // getName2.call(Baby)
+
+
+
+        // // 2. 不能作为构造函数 实例化对象
+
+        // let Person = (name, age) => {
+        //     this.name = name
+        //     this.age = age
+        // }
+
+        // let me = new Person('Gubao', 5)
+
+        // console.log(me)
+
+
+
+        // // 3. 不能使用 arguments 变量
+
+
+        // let fn = () => {
+        //     console.log(arguments)
+        // }
+
+        // fn(1, 2, 3)
+
+
+
+        // 4. 箭头函数的简写
+
+        // 1) 省略小括号 当形参只有一个
+
+        // let add = (n) => {
+        //     return n + n
+        // }
+
+        // // ===
+
+        // let add = n => {
+        //     return n + n
+        // }
+
+
+
+        // // 2) 省略花括号 当代码体只有一行代码，return必须省略，结果是返回值
+
+        // let times = (n) => {
+        //     return n * n
+        // }
+
+        // // ===
+
+        // let times = n => n * n
+
+
+
+
+
+
+
+
+        let ad = document.getElementById('ad')
+        ad.addEventListener('click', function () {
+            setTimeout(() => {
+                this.style.background = '#333'
+            }, 1000)
+        })
+
+
+        // let ad = document.getElementById('ad')
+        // ad.addEventListener('click', function () {
+        //     let _this = this
+        //     setTimeout(function () {
+        //         _this.style.background = '#333'
+        //     }, 1000)
+        // })
+
+
+
+
+        const arr = [1, 6, 9, 12, 100, 23]
+
+
+        // const result = arr.filter(i => i % 2 === 0)
+
+        const result = arr.filter(i => {
+            if (i % 2 === 0) {
+                return true
+            } else {
+                return false
+            }
+        })
+
+
+
+        // const result = arr.filter(function (i) {
+        //     if (i % 2 === 0) {
+        //         return true
+        //     } else {
+        //         return false
+        //     }
+        // })
+
+
+        console.log(result)
+
+
+
+    </script>
+</body>
+
+</html>
