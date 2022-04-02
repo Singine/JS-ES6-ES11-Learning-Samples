@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 生成器函数
+        // 异步编程
+
+        function* gen(arg) {
+            { 
+                console.log(1,arg) 
+            }
+            let test1 = yield 'dabei'
+            { 
+                console.log(test1) 
+                console.log(2) 
+            }
+            let test2 = yield 'chishi'
+            { 
+                console.log(test2) 
+                console.log(3) 
+            }
+        }
+
+        let iterator = gen('AAA')
+
+        console.log(iterator.next('000'))
+        console.log(iterator.next('BBB'))
+        console.log(iterator.next('CCC'))
+
+        // for(let v of gen()){
+        //     console.log(v)
+        // }
+
+    </script>
+</body>
+
+</html>
