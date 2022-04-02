@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 声明一个map
+        let m = new Map()
+
+        // 添加元素
+        m.set('name', 'Gubao')
+        m.set('action', 'Bobo')
+
+        console.log(m)
+
+
+        let key = {
+            age: 5
+        }
+
+        m.set(key, [1, 2, 3, 4, 5])
+
+
+        // 获取map的元素个数
+        console.log('size', m.size)
+
+
+        // //删除map中的元素
+        // m.delete(key)
+        // console.log('delete',m)
+
+
+        // 获取元素
+        console.log('get', m.get('name'))
+        console.log('get', m.get(key))
+
+
+        // // 清空map
+        // m.clear()
+        // console.log('clear', m)
+
+
+        //遍历map
+        for(v of m){
+            console.log('for',v)
+        }
+
+
+    </script>
+</body>
+
+</html>

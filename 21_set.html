@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let s = new Set()
+        let s2 = new Set(['Huihui', 'Yaoyao', 'Yaoyao'])
+
+        console.log(s, typeof s)
+        console.log(s2)
+
+        // 元素的个数 size
+        console.log(s2.size)
+
+        // 添加新的元素 add
+        console.log(s2.add('Gagaga'))
+
+        // 删除新的元素 delete
+        console.log(s2.delete('Gagaga'))
+        console.log(s2)
+
+        // 检测是否含有元素 has
+        console.log(s2.has('Huihui'))
+        console.log(s2.has('Gagaga'))
+
+        // 清空集合 clear
+        // s2.clear()
+        // console.log(s2)
+        // console.log(s2.size)
+    
+        // 遍历集合数据
+        for(v of s2){
+            console.log(v)
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
