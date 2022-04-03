@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const family = {
+            Gubao: 'Gubao',
+            Baby: ['Huihui', 'Yaoyao', 'Gagaga', 'Wawawawa'],
+            Pet: ['Heihei', 'Bianbian', 'Tata', 'Guigui']
+
+        }
+
+        console.log(Object.keys(family))
+        console.log(Object.values(family))
+
+
+        console.log(Object.entries(family))
+        const m = new Map(Object.entries(family))
+        console.log(m)
+        console.log(m.get('Pet'))
+
+
+
+
+        console.log(Object.getOwnPropertyDescriptors(family))
+
+        const obj = Object.create(null, {
+            name: {
+                value: 'gubao',
+                writable: true,
+                configurable: true,
+                enumerable: true
+            }
+        })
+
+        
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
