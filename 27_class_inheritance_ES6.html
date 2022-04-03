@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // ES6 Class的继承
+
+        // 父类的构造方法
+        class Fmaily {
+            constructor(name, age) {
+                this.name = name
+                this.age = age
+            }
+
+            // 父类的成员属性
+            show() {
+                console.log("Family")
+            }
+        }
+
+        // 子类继承父类的属性
+        class Baby extends Fmaily {
+            constructor(name, age, tag) {
+                super(name, age)
+                this.tag = tag
+            }
+
+            print() {
+                console.log("Print")
+            }
+
+
+
+            // 子类重写父类的同名方法
+            show() {
+                console.log("Baby")
+            }
+
+
+        }
+
+        const Hui = new Baby('Huihui', 1, 'Baby')
+
+        console.log(Hui)
+
+        Hui.print()
+        Hui.show()
+
+    </script>
+</body>
+
+</html>

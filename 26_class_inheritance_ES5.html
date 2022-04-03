@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // ES5 构造函数的继承
+
+        // 父级构造函数
+        function Family(name,age){
+            this.name = name
+            this.age = age
+        }
+
+        Family.prototype.show = function(){
+            console.log("Family!")
+        }
+
+
+        // 子集构造函数
+
+        function Baby(name,age,action) {
+            Family.call(this,name,age)
+            this.action = action
+        }
+
+        Baby.prototype = new Family
+        Baby.prototype.constructor = Baby
+
+        Baby.prototype.print = function(){
+            console.log("看看！")
+        }
+
+        let b = new Baby('Huihui',1,'Bobo')
+
+        console.log(b)
+        b.print()
+        b.show()
+
+    </script>
+</body>
+
+</html>

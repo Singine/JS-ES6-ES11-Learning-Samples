@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //ES5 
+
+        // function Baby(){
+
+        // }
+
+
+        // Baby.name = 'Yaoyao'
+        // Baby.age = 1
+
+        // Baby.show = function(){
+        //     console.log('宝宝！')
+        // }
+
+        // console.dir(Baby)
+
+        // let a = new Baby()
+        // console.log(a)
+        // console.log(a.__proto__.constructor.name)
+
+
+
+
+
+        // Baby.prototype.name = 'Yaoyao'
+        // Baby.prototype.age = 1
+
+        // Baby.prototype.show = function(){
+        //     console.log('宝宝！')
+        // }
+
+        // let a = new Baby()
+        // console.log(a.name)
+        // console.log(a.age)
+        // a.show()
+
+
+
+
+        // ES6
+
+
+
+
+        class Baby {
+            static name = "Gubao"
+            static show() {
+                console.log('宝宝！')
+            }
+        }
+
+        let Hui = new Baby();
+        console.log(Hui.__proto__.constructor.name)
+        console.log(Baby.name)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -10,8 +10,39 @@
 <body>
     <script>
 
-       
+        //ES5 通过构造函数来实现类的声明和使用
 
+        // function Baby(name, age) {
+        //     this.name = name
+        //     this.age = age
+        // }
+
+        // Baby.prototype.show = function () {
+        //     console.log('宝宝！')
+        // }
+
+        // let Hui = new Baby('Huihui', 1)
+        // Hui.show()
+        // console.log(Hui)
+
+
+
+
+        //ES6 通过Class来实现类的声明和使用
+        class Baby {
+            constructor(name, age) {
+                this.name = name
+                this.age = age
+            }
+            show() {
+                console.log('宝宝！')
+            }
+        }
+
+        let Hui = new Baby('Huihui',1)
+
+        console.log(Hui)
+        Hui.show()
 
     </script>
 </body>
