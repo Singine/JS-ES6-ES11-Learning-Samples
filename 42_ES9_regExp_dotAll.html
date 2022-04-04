@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let str = `
+            <ul>
+                <li>
+                    <a>灰灰</a>
+                    <p>1</p>
+                </li>
+                <li>
+                    <a>药药</a>
+                    <p>1</p>
+                </li>
+                <li>
+                    <a>嘎嘎嘎</a>
+                    <p>0</p>
+                </li>
+                <li>
+                    <a>哇哇哇哇</a>
+                    <p>0</p>
+                </li>
+            </ul>
+        `
+
+        // const reg = /<li>\s+<a>(.*?)<\/a>\s+<p>(.*?)<\/p>/
+        const reg = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/gs
+
+        let result
+        let arr = []
+        while (result = reg.exec(str)) {
+            let data = {
+                name:result[1],
+                age:result[2]
+            }
+            arr.push(data)
+        }
+        console.log(arr)
+
+        
+
+    </script>
+</body>
+
+</html>

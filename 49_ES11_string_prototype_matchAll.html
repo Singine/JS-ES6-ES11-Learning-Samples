@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let str = `
+            <ul>
+                <li>
+                    <a>灰灰</a>
+                    <p>1</p>
+                </li>
+                <li>
+                    <a>药药</a>
+                    <p>1</p>
+                </li>
+                <li>
+                    <a>嘎嘎嘎</a>
+                    <p>0</p>
+                </li>
+                <li>
+                    <a>哇哇哇哇</a>
+                    <p>0</p>
+                </li>
+            </ul>
+        `
+
+
+        const reg = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/gs
+            
+        const result = str.matchAll(reg)
+
+        console.log(result);
+
+        // for(let v of result){
+        //     console.log(v);
+        // }
+
+        const arr = [...result]
+
+        console.log(arr);
+
+    </script>
+</body>
+
+</html>

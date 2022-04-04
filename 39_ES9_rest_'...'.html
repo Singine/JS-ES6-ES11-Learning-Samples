@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // ES9中 对象和数组都能使用 rest 和 扩展运算符
+
+        // function family ({Gubao,...user}){
+        //     console.log(Gubao)
+        //     console.log(user)
+        // }
+
+        // family({
+        //     Gubao:'Gubao',
+        //     baby:['Huihui','Yaoyao'],
+        //     pet:['Heihei','Bianbian']
+        // })
+
+
+        const Hui = {
+            name1: 'Huihui',
+            age1: 1
+        }
+
+        const Yao = {
+            name2: 'Yaoyao',
+            age2: 1
+        }
+
+        const baby = {
+            ...Hui,
+            ...Yao
+        }
+
+        console.log(baby)
+
+
+    </script>
+</body>
+
+</html>
